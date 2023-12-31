@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_zizhan.mk
+    $(LOCAL_DIR)/twrp_zizhan.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_zizhan-user \
-    omni_zizhan-userdebug \
-    omni_zizhan-eng
+    twrp_zizhan-user \
+    twrp_zizhan-userdebug \
+    twrp_zizhan-eng
