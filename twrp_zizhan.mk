@@ -9,21 +9,21 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
+# Inherit some common twrp stuff.
+$(call inherit-product, vendor/twrp/config/common.mk)
+
+# Virtual A/B OTA
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
 # Inherit from zizhan device
 $(call inherit-product, device/xiaomi/zizhan/device.mk)
 
+# Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := zizhan
 PRODUCT_NAME := omni_zizhan
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := 22061218C
 PRODUCT_MANUFACTURER := xiaomi
-
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+PRODUCT_RELEASE_NAME := Mi Mix Fold 2 (zizhan)
 
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="zizhan-user 12 SKQ1.230401.001 V816.0.23.12.18.DEV release-keys"
-
-BUILD_FINGERPRINT := Xiaomi/zizhan/zizhan:12/SKQ1.230401.001/V816.0.23.12.18.DEV:user/release-keys
