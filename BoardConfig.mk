@@ -9,6 +9,8 @@ DEVICE_PATH := device/xiaomi/zizhan
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # A/B
 AB_OTA_UPDATER := true
@@ -96,10 +98,33 @@ PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := 2099-12-31
 PLATFORM_VERSION := 16.1.0
 
-# TWRP Configuration
+## TWRP-Specific configuration
 TW_THEME := portrait_hdpi
-TW_EXTRA_LANGUAGES := true
+TW_DEVICE_VERSION := kelexine-@xda
+RECOVERY_SDCARD_ON_DATA := true
+TARGET_USES_MKE2FS := true
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
+TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
+TW_DEFAULT_BRIGHTNESS := 1200
+TW_MAX_BRIGHTNESS := 4047
+TW_Y_OFFSET := 40
+TW_H_OFFSET := -50
+TW_EXCLUDE_DEFAULT_USB_INIT := true
+TW_EXCLUDE_NANO := false
+TW_EXCLUDE_APEX := true
+TW_INCLUDE_LPDUMP := true
+TW_INCLUDE_LPTOOLS := true
+TW_EXCLUDE_BASH := true
+TW_INCLUDE_TWRPAPP := false
+TW_EXTRA_LANGUAGES := false
+TW_INCLUDE_NTFS_3G := true
+TW_NO_SCREEN_BLANK := true
 TW_SCREEN_BLANK_ON_BOOT := true
-TW_INPUT_BLACKLIST := "hbtp_vm"
-TW_USE_TOOLBOX := true
-TW_INCLUDE_REPACKTOOLS := true
+TW_INCLUDE_RESETPROP := true
+TW_HAS_MTP := true
+TW_FRAMERATE := 60
+TW_PREPARE_DATA_MEDIA_EARLY := true
+
+# Debug
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
