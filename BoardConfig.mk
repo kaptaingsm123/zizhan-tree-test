@@ -100,7 +100,7 @@ PLATFORM_VERSION := 16.1.0
 
 ## TWRP-Specific configuration
 TW_THEME := portrait_hdpi
-TW_DEVICE_VERSION := kelexine-@xda
+TW_DEVICE_VERSION := kaptain_@xda
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_USES_MKE2FS := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
