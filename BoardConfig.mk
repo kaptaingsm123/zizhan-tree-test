@@ -25,7 +25,6 @@ AB_OTA_PARTITIONS += \
     vendor \
     odm \
     odm
-BOARD_USES_RECOVERY_AS_BOOT := true
 
 # Architecture
 TARGET_ARCH := arm64
@@ -51,23 +50,6 @@ TARGET_NO_BOOTLOADER := true
 
 # Display
 TARGET_SCREEN_DENSITY := 440
-
-# Kernel
-BOARD_KERNEL_PAGESIZE         := 4096
-TARGET_KERNEL_ARCH            := arm64
-TARGET_KERNEL_HEADER_ARCH     := arm64
-BOARD_KERNEL_IMAGE_NAME       := Image
-BOARD_BOOT_HEADER_VERSION     := 4
-TARGET_KERNEL_CLANG_COMPILE   := true
-TARGET_PREBUILT_KERNEL        := $(DEVICE_PATH)/prebuilt/kernel_empty
-BOARD_MKBOOTIMG_ARGS          += --header_version $(BOARD_BOOT_HEADER_VERSION)
-BOARD_MKBOOTIMG_ARGS          += --pagesize $(BOARD_KERNEL_PAGESIZE)
-
-# Kernel - prebuilt
-TARGET_FORCE_PREBUILT_KERNEL := true
-ifeq ($(TARGET_FORCE_PREBUILT_KERNEL),true)
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel_empty
-endif
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 104857600
