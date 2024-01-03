@@ -99,12 +99,6 @@ BOARD_SYSTEMSDK_VERSIONS := $(BOARD_SHIPPING_API_LEVEL)
 PRODUCT_PACKAGES += fastbootd
 PRODUCT_PACKAGES += android.hardware.fastboot@1.1-impl-mock
 
-PRODUCT_SHARED_BOOT_CONTROL_HAL := \
-    bootctrl.taro \
-    libgptutils \
-    libz \
-    libcutils
-
 PRODUCT_PACKAGES += \
     otapreopt_script \
     cppreopts.sh \
