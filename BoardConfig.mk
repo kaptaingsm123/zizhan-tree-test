@@ -16,15 +16,10 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
     system \
-    system \
-    system_ext \
     system_ext \
     product \
-    product \
-    vendor \
     vendor \
     odm \
-    odm
 
 # Architecture
 TARGET_ARCH := arm64
